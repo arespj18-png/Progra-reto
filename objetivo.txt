@@ -1,0 +1,5 @@
+Crear un menu en el que te pida que quieres(ia modo cooperativo o ia para mejorar en juegos competitivos)
+crear una lista de juegos en los que tenemos disponible la ia y hacer al usuario que escriba uno de los juegos y si elige uno que no este en la lista que le de error y vuelva a pedir
+dar opcion a terminar el programa poniendo exit o alguna cosa asi para cuando quieras dejar de usarlo
+en el modo de juegos competitivos un submenu para elegir la dificultad del bot(facil,normal,dificil y dar opcion a aleatorio de entre esas tres)
+
