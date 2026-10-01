@@ -87,7 +87,7 @@ from gestor_archivos import guardar_informacion
 print("Formulario de registro")
 nombre_string=input("Introduce tu nombre: ")
 edad_int=int(input("Introduce tu edad: "))
-objetivos_string=(input("Cuales son tus objetivos con nuestro servicio"))
+objetivos_string=(input("Cuales son tus objetivos con nuestro servicio: "))
 guardar_informacion(nombre_string,edad_int,objetivos_string)
 
 print("¡Hola!")
