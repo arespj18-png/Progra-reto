@@ -8,77 +8,99 @@
 # enu principal llamar a esta funcion y que se ejecute
 def sub_menu_de_juegos_competitivos():
     while True:
-        opcion_int=input("Elige un juego")
-        if opcion_int==1:
-            sub_menu_dificultades_juegos_competitivos()
+        print("Juegos disponibles:")
+        for juego in lista_juegos_disponibles_competitivo_string:
+            print("-", juego)
+        
+        opcion_string = input("Elige un juego(o para salir escribe exit): ")
+
+        if opcion_string == "exit":
+            print("Saliendo")
+            return "exit"
+
+        elif opcion_string in lista_juegos_disponibles_competitivo_string:
+            print("Juego seleccionado correctamente")
+            resultado_string = sub_menu_dificultades_juegos_competitivos()
+            if resultado_string == "exit":
+                return "exit"
+            break
+        else:
+            print("El juego intrducido no esta en la lista, intentalo de nuevo")
+
+
 def sub_menu_de_juegos_cooperativos():
     while True:
-        opcion_int=input("Elige un juego")
-        if opcion_int==1:
-            print("Listo para jugar!")
+        print("Juegos disponibles")
+        for juego in lista_juegos_disponibles_cooperativos_string:
+            print("-", juego)
+        opcion_string = input("Elige un juego(exit para salir): ")
 
+        if opcion_string == "exit":
+            print("Cerrando programa")
+            return "exit"
+
+        elif opcion_string in lista_juegos_disponibles_cooperativos_string:
+            print(" Listo para jugar")
+            break
+        else:
+            print("Opcion no valida, intentalo de nuevo")
 
 
 #Despues del submenu anterior creo otro que sea para elegir la dificultad de la ia 
 
-
 def sub_menu_dificultades_juegos_competitivos():
     while True:
-        opcion_int=input("Elige la dificultad del bot/ia")
-        print("Opciones:\n1. Dificultad Facil\n2. Dificultad Intermedia\n3. Dificultad Dificil\n4.Salir al menu anterior")
-        if opcion_int==1:
+        print("Opciones:\n1. Dificultad Facil\n2. Dificultad Intermedia\n3. Dificultad Dificil\n4. Salir al menu anterior")
+        opcion_input = input("Elige la dificultad del bot/ia: ")
+        
+        if opcion_input == "exit":
+            print("Cerrando programa...")
+            return "exit"
+            
+        elif opcion_input == "1":
             print("Dificultad facil")
             print("Programa en ejecucion")
+            break
             
-        elif opcion_int==2:
+        elif opcion_input == "2":
             print("Dificultad intermedia")
             print("Programa en ejecucion")
+            break
 
-        elif opcion_int==3:
+        elif opcion_input == "3":
             print("Dificultad dificil")
             print("Programa en ejecucion")
+            break
         
-        elif opcion_int==4:
+        elif opcion_input == "4":
             print("Saliendo al menu anterior")
             break
         else:
             print("Opcion no valida intentalo de nuevo")
 
 
-lista_juegos_disponibles_competitivo_string=["1.Valorant","2.CS2","3.Fortnite","4.Rocket League"]
-lista_juegos_disponibles_cooperativos_string=["It takes two","Mas juegos"] #F   altan juegos por añadir
+lista_juegos_disponibles_competitivo_string = ["Valorant", "CS2", "Fortnite", "Rocket League"]
+lista_juegos_disponibles_cooperativos_string = ["It takes two", "Helldivers 2", "Overcooked 2"] #F   altan juegos por añadir
+
 print("¡Hola!")
-print("Que tipo de IA quieres usar?")
-print("1. Ia para juegos cooperativos\n2. Ia para practicar en juegos competitivos")
-opcion_int=int(input("Elige una opcion"))
 
 while True:
-    if opcion_int==1:
-        sub_menu_de_juegos_competitivos()
-
-    elif opcion_int==2:
-        sub_menu_de_juegos_cooperativos()
-    elif opcion_int==0:
+    print("Que tipo de IA quieres usar?")
+    print("1. Ia para juegos cooperativos\n2. Ia para practicar en juegos competitivos\n0. Salir")
+    
+    opcion_input = input("Elige una opcion: ")
+    
+    if opcion_input == "exit" or opcion_input == "0":
         print("Adios")
         break
+
+    elif opcion_input == "1":
+        if sub_menu_de_juegos_cooperativos() == "exit":
+            break
+
+    elif opcion_input == "2":
+        if sub_menu_de_juegos_competitivos() == "exit":
+            break
     
     else:
-        print("Opcion no valida, intentalo de nuevo")
-
-
-
-
-
-
-        
-
-
-        
-    
-
-        
-            
-
-
-
-
+        print("Opcion no valida, intentalo de nuevo")   
