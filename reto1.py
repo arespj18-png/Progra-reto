@@ -81,6 +81,14 @@ def sub_menu_dificultades_juegos_competitivos():
 
 lista_juegos_disponibles_competitivo_string = ["Valorant", "CS2", "Fortnite", "Rocket League"]
 lista_juegos_disponibles_cooperativos_string = ["It takes two", "Helldivers 2", "Overcooked 2"] #F   altan juegos por añadir
+#Importo la funcion creada en gestor_archivos.py y recogo la informacion necesaria al final llamo a la funcion para guardar la infor
+from gestor_archivos import guardar_informacion
+
+print("Formulario de registro")
+nombre_string=input("Introduce tu nombre: ")
+edad_int=int(input("Introduce tu edad: "))
+objetivos_string=(input("Cuales son tus objetivos con nuestro servicio"))
+guardar_informacion(nombre_string,edad_int,objetivos_string)
 
 print("¡Hola!")
 
