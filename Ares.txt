@@ -1,3 +1,4 @@
-INFORMACION DE USUARIONombre:Ares
-Edad:19
-Objetivos: Mejorar en juegos competitivos
+INFORMACION DE USUARIO
+Nombre:Ares
+Edad:18
+Objetivos:A
