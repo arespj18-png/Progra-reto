@@ -78,28 +78,28 @@ def sub_menu_de_juegos_cooperativos():
 def sub_menu_dificultades_juegos_competitivos():
     while True:
         print("Opciones:\n1. Dificultad Facil\n2. Dificultad Intermedia\n3. Dificultad Dificil\n4. Salir al menu anterior")
-        opcion_input = input("Elige la dificultad del bot/ia: ")
+        opcion_string = input("Elige la dificultad del bot/ia: ")
         
-        if opcion_input == "0":
+        if opcion_string == "0":
             print("Cerrando programa...")
             return "0"
             
-        elif opcion_input == "1":
+        elif opcion_string == "1":
             print("Dificultad facil")
             print("Programa en ejecucion")
             break
             
-        elif opcion_input == "2":
+        elif opcion_string == "2":
             print("Dificultad intermedia")
             print("Programa en ejecucion")
             break
 
-        elif opcion_input == "3":
+        elif opcion_string == "3":
             print("Dificultad dificil")
             print("Programa en ejecucion")
             break
         
-        elif opcion_input == "4":
+        elif opcion_string == "4":
             print("Saliendo al menu anterior")
             break
         else:
@@ -115,8 +115,8 @@ from gestor_archivos import guardar_informacion
 #Aqui preguntamos si el usuario ya esta registrado para pedirle la contraseña o mandarlo al formulario de registro
 tiene_cuenta_string = input("¿Tienes cuenta? (si/no): ")
 if  tiene_cuenta_string == "si":
-    contraseña_str = input("Introduce la contraseña \n")
-    if contraseña_str == "1234":
+    contraseña_string = input("Introduce la contraseña \n")
+    if contraseña_string == "1234":
         print("Contraseña correcta")
     else:
         print("Contraseña incorrecta")
@@ -135,21 +135,21 @@ while True:
     print("Que tipo de IA quieres usar?")
     print("1. Ia para juegos cooperativos\n2. Ia para practicar en juegos competitivos\n3. Mostrar informacion de juegos\n0. Salir")
     
-    opcion_input = input("Elige una opcion: ")
+    opcion_string = input("Elige una opcion: ")
     
-    if opcion_input == "0":
+    if opcion_string == "0":
         print("Adios")
         break
 
-    elif opcion_input == "1":
+    elif opcion_string == "1":
         sub_menu_de_juegos_cooperativos()
 
-    elif opcion_input == "2":
+    elif opcion_string == "2":
         sub_menu_de_juegos_competitivos()
             
-    elif opcion_input == "3":
-        nombre = input("Introduce el nombre del juego para ver su informacion: ")
-        mostrar_informacion_juego(nombre)
+    elif opcion_string == "3":
+        nombre_string = input("Introduce el nombre del juego para ver su informacion: ")
+        mostrar_informacion_juego(nombre_string)
     
     else:
         print("Opcion no valida, intentalo de nuevo")   
