@@ -1,4 +1,0 @@
-INFORMACION DE USUARIO
-Nombre:Ares
-Edad:18
-Objetivos:A
